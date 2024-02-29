@@ -14,14 +14,18 @@ pipeline {
             }
         }
         stage('Email JenkinsPipeline') {
-            steps {
-                mail bcc: ", body: 'Hello, This is an email from jenkins pipeline.', cc: ", from: ", reply To: ",
-                    subject: 'EmailJenkinsPipeline', to: 'rash12342504@gmail.com' }
-
-
-        // Add more stages as needed
+    steps {
+        script {
+            emailext bcc: '', 
+                     body: 'Hello, This is an email from Jenkins pipeline.', 
+                     cc: '', 
+                     from: 'rash12342504@gmail.co', 
+                     replyTo: 'rash12342504@gmail.co', 
+                     subject: 'Email JenkinsPipeline', 
+                     to: 'rash12342504@gmail.com'
+        }
     }
-
+}
 
 }
 }
