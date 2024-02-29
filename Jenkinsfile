@@ -15,16 +15,7 @@ pipeline {
         }
         stage('Email JenkinsPipeline') {
     steps {
-        script {
-            emailext (
-                to: 'rash12342504@gmail.com',
-                subject: 'Email JenkinsPipeline',
-                body: 'Hello, This is an email from Jenkins pipeline.',
-                mimeType: 'text/plain',
-                replyTo: 'rash12342504@gmail.com',
-                from: 'rash12342504@gmail.com'
-            )
-        }
+        mail bcc: '', body: 'This is triggered by git push', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline', to: 'rash12342504@gmail.com'
     }
 }
 
