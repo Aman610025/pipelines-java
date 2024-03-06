@@ -8,7 +8,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git branch: 'main',
-                    url: 'https://gitlab.com/Aman42988/pipelines-java-1.git'
+                    url: 'https://github.com/Aman610025/pipelines-java.git'
 
              }
         }
